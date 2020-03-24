@@ -6,7 +6,7 @@ const BookListItem = ({ book }) => {
     return (
         <>
             <span>{title}</span>
-            <br/>
+            <br />
             <span>{author}</span>
         </>
     );
