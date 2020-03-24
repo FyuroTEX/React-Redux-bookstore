@@ -38,10 +38,7 @@ const mapStateToProps = ({ books }) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         booksLoaded: (newBooks) => {
-            dispatch({
-                type: 'BOOKS_LOADED',
-                payload: newBooks
-            });
+            dispatch(booksLoaded(newBooks));
         }
     };
 };
