@@ -36,14 +36,10 @@ const mapStateToProps = ({ books }) => {
     return { books };
 };
 const mapDispatchToProps = {
-    booksLoaded                     // bindActionCretors
+    booksLoaded
 };
 
 export default compose(
     withBookstoreService(),
     connect(mapStateToProps, mapDispatchToProps)
 )(BookList);
-
-
-// export default withBookstoreService()(
-//     connect(mapStateToProps, mapDispatchToProps)(BookList));
