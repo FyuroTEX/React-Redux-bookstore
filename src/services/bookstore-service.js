@@ -5,7 +5,7 @@ export default class BookstoreService {
         return [
             {
                 id: 1,
-                title: 'Witcher',
+                title: 'The Witcher',
                 author: 'A. Sapkowski'
             },
             {
