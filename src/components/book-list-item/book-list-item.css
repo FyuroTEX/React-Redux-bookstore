@@ -24,3 +24,10 @@
 .book-list-item .book-details .book-price{
     font-size: 1.4rem;
 }
+.add-to-cart{
+    padding-left: 17px;
+    padding-right: 20px;
+}
+.add-to-cart i{
+    font-size: 1.5rem;
+}
