@@ -21,7 +21,7 @@ const ShoppingaCartTable = () => {
                         <td>1</td>
                         <td>The Witcher</td>
                         <td>2</td>
-                        <td>$106</td>
+                        <td>$53</td>
                         <td>
                             <button className="btn btn-outline-danger btn-sm float-right">
                                 <i className="fa fa-trash-o" />
@@ -37,7 +37,7 @@ const ShoppingaCartTable = () => {
                 </tbody>
             </table>
             <div className='total'>
-                Total: $282
+                Total: $106
             </div>
         </div>
     );

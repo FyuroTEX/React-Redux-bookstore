@@ -11,8 +11,11 @@ class BookList extends Component {
 
     componentDidMount() {
         const { bookstoreService } = this.props;
-        const data = bookstoreService.getBooks();
-        this.props.booksLoaded(data);
+        bookstoreService.getBooks()
+            .then((data) => {
+                this.props.booksLoaded(data);
+            });
+
     };
 
 
