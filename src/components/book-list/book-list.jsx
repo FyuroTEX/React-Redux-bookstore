@@ -33,12 +33,15 @@ class BookListContainer extends Component {
 
     render() {
         const { books, loading, error } = this.props;
+
         if (loading) {
             return <Spinner />
         };
+
         if (error) {
             return <ErrorIndicator />
         };
+        
         return <BookList books={books} />
     };
 };
