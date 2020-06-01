@@ -2,22 +2,22 @@ import React from 'react';
 import './book-list-item.css';
 
 const BookListItem = ({ book }) => {
+    
     const { title, author, price, coverImage } = book;
-    return (
 
+    return (
         <div className='book-list-item'>
             <div className='book-cover'>
-                <img src={coverImage} alt={title}/>
+                <img src={coverImage} alt={title} />
             </div>
             <div className='book-details'>
                 <span className='book-title'>{title}</span>
                 <div className='book-author'>{author}</div>
                 <div className='book-price'>{price}$</div>
                 <button className='btn btn-info add-to-cart'>
-                <i className="fa fa-cart-plus" />
+                    <i className="fa fa-cart-plus" />
                 </button>
             </div>
-
         </div>
     );
 };

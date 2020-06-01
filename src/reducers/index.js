@@ -2,7 +2,7 @@
 const initialState = {
     books: [],
     loading: true,
-    error: null  
+    error: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,13 +12,13 @@ const reducer = (state = initialState, action) => {
             return {
                 books: [],
                 loading: true,
-                error: null  
+                error: null
             };
         case 'FETCH_BOOKS_SUCCESS':
             return {
                 books: action.payload,
                 loading: false,
-                error: null  
+                error: null
             };
         case 'FETCH_BOOKS_FAILURE':
             return {

@@ -1,4 +1,3 @@
-
 export default class BookstoreService {
 
     data = [
@@ -23,7 +22,7 @@ export default class BookstoreService {
             setTimeout(() => {
                 if (Math.random() > 0.75) {
                     reject(new Error('Something bad happend'));
-                } else {
+                } else { 
                     resolve(this.data);
                 };
             }, 700);
