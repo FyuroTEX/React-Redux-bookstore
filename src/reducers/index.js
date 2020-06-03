@@ -20,21 +20,29 @@ const updateCartItems = (cartItems, item, idx) => {
         ...cartItems.slice(idx + 1)
     ];
 };
-const updateCartItem = (book, item) => {
-    if(item) {
-        return {
-            ...item,
-            count: item.count + 1,
-            total: item.total + book.price
-        };
-    } else {
-        return {
-            id: book.id,
-            title: book.title,
-            count: 1,
-            total: book.price
-        };
-    }
+const updateCartItem = (book, item = {}) => {
+    //default props
+    const { id = book.id, title = book.title, count = 0, total = 0 } = item;
+    return {
+        id,
+        title,
+        count: count + 1,
+        total: total + book.price
+    };
+    // if(item) {
+    //     return {
+    //         ...item,
+    //         count: item.count + 1,
+    //         total: item.total + book.price
+    //     };
+    // } else {
+    //     return {
+    //         id: book.id,
+    //         title: book.title,
+    //         count: 1,
+    //         total: book.price
+    //     };
+    // }
 };
 
 const reducer = (state = initialState, action) => {
@@ -67,11 +75,11 @@ const reducer = (state = initialState, action) => {
             const itemIndex = state.cartItems.findIndex(({ id }) => id === bookId);
             const item = state.cartItems[itemIndex];
 
-
+            const newItem = updateCartItem(book, item);
 
             return {
                 ...state,
-                cartItems: updateCartItems(state.cartItems, item, itemIndex)
+                cartItems: updateCartItems(state.cartItems, newItem, itemIndex)
             };
 
 
