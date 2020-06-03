@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { HomePage, CartPage } from '../pages';
 import ShopHeader from '../shop-header';
-import ShoppingaCartTable from './../shoping-cart-table';
 
 import './app.css';
 
