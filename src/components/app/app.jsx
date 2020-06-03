@@ -19,7 +19,6 @@ const App = () => {
                     component={CartPage}
                 />
             </Switch>
-            <ShoppingaCartTable />
         </main>
     )
 };

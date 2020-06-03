@@ -22,7 +22,8 @@ export default class BookstoreService {
             setTimeout(() => {
                 if (Math.random() > 0.75) {
                     reject(new Error('Something bad happend'));
-                } else { 
+                    console.log('This is Math.random() in service');
+                } else {
                     resolve(this.data);
                 };
             }, 700);
