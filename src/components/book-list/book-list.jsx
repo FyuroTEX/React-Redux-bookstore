@@ -3,6 +3,7 @@ import BookListItem from '../book-list-item';
 import ErrorIndicator from '../error-indicator';
 import { connect } from 'react-redux';
 import { withBookstoreService } from '../hoc';
+import { bindActionCreators } from 'redux';
 import { fetchBooks, bookAddedToCart } from '../../actions';
 import { compose } from '../../utils';
 import Spinner from '../spinner';
@@ -51,11 +52,18 @@ const mapStateToProps = ({ bookList: { books, loading, error } }) => {
     return { books, loading, error };
 };
 const mapDispatchToProps = (dispatch, { bookstoreService }) => {
-    return {
-        fetchBooks: fetchBooks(bookstoreService, dispatch),
-        onAddedToCart: (id) => dispatch(bookAddedToCart(id))
-    };
+    return bindActionCreators({
+        fetchBooks: fetchBooks(bookstoreService),
+        onAddedToCart: bookAddedToCart
+    }, dispatch);
 };
+// const mapDispatchToProps = (dispatch, { bookstoreService }) => {
+//     return {
+//         // fetchBooks: fetchBooks(bookstoreService, dispatch),
+//         fetchBooks: ()=> dispatch(fetchBooks(bookstoreService)()),
+//         onAddedToCart: (id) => dispatch(bookAddedToCart(id))
+//     };
+// };
 
 export default compose(
     withBookstoreService(),
