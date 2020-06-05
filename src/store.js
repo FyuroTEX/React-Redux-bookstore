@@ -23,8 +23,6 @@ const stringMiddleware = () => (next) => (action) => {
 };
 
 
-
-
 const store = createStore(reducer, applyMiddleware( thunkMiddleware, stringMiddleware, logMiddleware));
 
 store.dispatch('HELLO_WORLD');
