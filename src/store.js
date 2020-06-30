@@ -25,22 +25,22 @@ const stringMiddleware = () => (next) => (action) => {
 
 const store = createStore(reducer, applyMiddleware( thunkMiddleware, stringMiddleware, logMiddleware));
 
-store.dispatch('HELLO_WORLD');
+// store.dispatch('HELLO_WORLD');
 
-const myAction = (dispatch) => {
-    setTimeout(() => dispatch({
-        type: 'DELAYED_ACTION'
-    }), 2000);
-};
+// const myAction = (dispatch) => {
+//     setTimeout(() => dispatch({
+//         type: 'DELAYED_ACTION'
+//     }), 2000);
+// };
 
-const delayedActionCreator = (timeout) => (dispatch) => {
-    setTimeout(() => dispatch({
-        type: 'DELAYED_ACTION_CREATOR'
-    }), timeout);
-};
+// const delayedActionCreator = (timeout) => (dispatch) => {
+//     setTimeout(() => dispatch({
+//         type: 'DELAYED_ACTION_CREATOR'
+//     }), timeout);
+// };
 
 
-store.dispatch(myAction);
-store.dispatch(delayedActionCreator(3500));
+// store.dispatch(myAction);
+// store.dispatch(delayedActionCreator(3500));
 
 export default store;
