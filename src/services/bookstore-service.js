@@ -1,3 +1,5 @@
+
+
 export default class BookstoreService {
 
     data = [
@@ -6,14 +8,14 @@ export default class BookstoreService {
             title: 'The Witcher',
             author: 'A. Sapkowski',
             price: 53,
-            coverImage: 'the_witcher.jpg'
+            coverImage: './image/the_witcher.jpg'
         },
         {
             id: 2,
             title: 'Atlas Shrugged',
             author: 'A. Rand',
             price: 33,
-            coverImage: 'atlas.jpg'
+            coverImage: './image/atlas.jpg'
         }
     ];
 
